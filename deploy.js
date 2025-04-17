@@ -3,7 +3,7 @@ import { ApiPromise, WsProvider, Keyring } from '@polkadot/api';
 import { BN, BN_ONE, BN_ZERO } from "@polkadot/util";
 import { json } from "./abi.js";
 
-const wsProvider = new WsProvider('ws://127.0.0.1:9944');
+const wsProvider = new WsProvider('wss://rpc.testnet.vne.network/');
 const api = await ApiPromise.create({ provider: wsProvider });
 const code = new CodePromise(api, json, json.source.wasm);
 
@@ -14,7 +14,7 @@ const gasLimit = api.registry.createType("WeightV2", {
 
 const storageDepositLimit = null;
 const keyring = new Keyring({ type: "ethereum" });
-const userKeyring = keyring.addFromUri('');
+const userKeyring = keyring.addFromUri('0x1a2daa226a2aa5644583e3111c900fc8d155231b9c1ee9d968b95ecebc8fc2e4');
 console.log(userKeyring.address);
 
 
