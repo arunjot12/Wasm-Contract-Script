@@ -14,7 +14,7 @@ const gasLimit = api.registry.createType("WeightV2", {
 
 const storageDepositLimit = null;
 const keyring = new Keyring({ type: "ethereum" });
-const userKeyring = keyring.addFromUri('0x1a2daa226a2aa5644583e3111c900fc8d155231b9c1ee9d968b95ecebc8fc2e4');
+const userKeyring = keyring.addFromUri('');
 console.log(userKeyring.address);
 
 

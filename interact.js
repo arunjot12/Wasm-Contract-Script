@@ -20,7 +20,7 @@ async function main() {
     console.log('Available contract methods:'.cyan, Object.keys(contract.tx));
 
     const keyring = new Keyring({ type: 'ethereum' });
-    const userKeyring = keyring.addFromUri('0x1a2daa226a2aa5644583e3111c900fc8d155231b9c1ee9d968b95ecebc8fc2e4');
+    const userKeyring = keyring.addFromUri('');
 
     async function calculate_price(name, duration) {
         const { result, gasConsumed, output } = await contract.query["calculatePrice"](
